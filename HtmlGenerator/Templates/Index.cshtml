@@ -1,0 +1,20 @@
+﻿@model HtmlGenerator.UserModel
+
+@{Layout = "layout";}
+
+
+    <p>
+        Hi @Model.Name,
+       @Include("Partial", Model)
+    </p>
+    <p>
+        Thanks for signing up to <a href="http://awesomesite.com">our awesome site</a>!
+    </p>
+
+    @if (!Model.IsPremiumUser)
+    {
+        <p>
+            To make the most of it, <a href="http://awesomesite.com/upgrade">upgrade to our premium package now</a>!
+        </p>
+    }
+  
